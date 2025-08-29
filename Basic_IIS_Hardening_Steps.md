@@ -58,7 +58,7 @@
 6. Click OK to save your changes.
 7. Run Command line from Administrator and then issue "IISRESET" to restart the IIS
 
-## Enable XSS-Protection in IIS (Depricated)
+## Enable XSS-Protection in IIS (Deprecated)
 
 > Note: The X-XSS-Protection header is deprecated and is no longer recommended as a primary defense mechanism. Modern browsers (like Chrome, Edge, and Safari) have removed support for it. Instead, use a Content Security Policy (CSP) for reliable protection against Cross-Site Scripting (XSS).
 
@@ -520,4 +520,5 @@ The remidiation is as follows
 1. Open Registry editor by doing START > Run, followed by "RegEdit".
 2. add a registry key named **NtfsDisable8dot3NameCreation** to **HKLM\SYSTEM\CurrentControlSet\Control\FileSystem**. 
 3. Set the value of the key to 1 to mitigate all 8.3 name conventions on the server.
+
 
