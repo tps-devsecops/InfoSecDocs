@@ -58,14 +58,11 @@
 6. Click OK to save your changes.
 7. Run Command line from Administrator and then issue "IISRESET" to restart the IIS
 
-## Enable XSS-Protection in IIS.
-1. Open **Internet Information Services (IIS)** Manager. START > RUN > inetmgr
-2. In the Connections pane on the left side, expand the Sites folder and select the site that you want to protect.
-3. Double-click the **HTTP Response Headers** icon in the feature list in the middle.
-4. In the Actions pane on the right side, click **Add**.
-5. In the dialog box that appears, type **X-XSS-Protection** in the Name field and type **1; mode=block** in the Value field.
-6. Click **OK** to save your changes.
-7. Run **Command line** from Administrator and then issue **"IISRESET"** to restart the IIS
+## Enable XSS-Protection in IIS (Depricated)
+
+> Note: The X-XSS-Protection header is deprecated and is no longer recommended as a primary defense mechanism. Modern browsers (like Chrome, Edge, and Safari) have removed support for it. Instead, use a Content Security Policy (CSP) for reliable protection against Cross-Site Scripting (XSS).
+
+Refenrence: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-XSS-Protection
 
 ## Configure Custom Error pages in IIS.
 Follow the Steps listed in this link. 
@@ -523,3 +520,4 @@ The remidiation is as follows
 1. Open Registry editor by doing START > Run, followed by "RegEdit".
 2. add a registry key named **NtfsDisable8dot3NameCreation** to **HKLM\SYSTEM\CurrentControlSet\Control\FileSystem**. 
 3. Set the value of the key to 1 to mitigate all 8.3 name conventions on the server.
+
